@@ -1,0 +1,2113 @@
+{
+    "query": "\"politecnico+di+milano\"", 
+    "results": [
+        {
+            "start": "2012-01-01", 
+            "end": "2012-01-31", 
+            "locations": [
+                {
+                    "count": "14", 
+                    "name": "milano "
+                }, 
+                {
+                    "count": "3", 
+                    "name": "genova "
+                }, 
+                {
+                    "count": "3", 
+                    "name": "urbino "
+                }, 
+                {
+                    "count": "2", 
+                    "name": "baranzate "
+                }, 
+                {
+                    "count": "2", 
+                    "name": "cascina "
+                }, 
+                {
+                    "count": "2", 
+                    "name": "concorezzo "
+                }, 
+                {
+                    "count": "2", 
+                    "name": "cormano "
+                }, 
+                {
+                    "count": "2", 
+                    "name": "lainate "
+                }, 
+                {
+                    "count": "2", 
+                    "name": "mezzago "
+                }, 
+                {
+                    "count": "2", 
+                    "name": "monza "
+                }
+            ], 
+            "companies": [
+                {
+                    "count": "2", 
+                    "name": "cariplo "
+                }, 
+                {
+                    "count": "2", 
+                    "name": "nokia "
+                }, 
+                {
+                    "count": "2", 
+                    "name": "samsung "
+                }, 
+                {
+                    "count": "2", 
+                    "name": "scala "
+                }, 
+                {
+                    "count": "2", 
+                    "name": "telecom italia "
+                }, 
+                {
+                    "count": "2", 
+                    "name": "vodafone "
+                }, 
+                {
+                    "count": "1", 
+                    "name": "alcatel - lucent "
+                }, 
+                {
+                    "count": "1", 
+                    "name": "amazon "
+                }, 
+                {
+                    "count": "1", 
+                    "name": "apple "
+                }
+            ], 
+            "people": [
+                {
+                    "count": "1", 
+                    "name": "gigi redaelli "
+                }, 
+                {
+                    "count": "1", 
+                    "name": "maurizio stampini "
+                }, 
+                {
+                    "count": "1", 
+                    "name": "professor giuliano noci "
+                }, 
+                {
+                    "count": "1", 
+                    "name": "valentino rossi "
+                }
+            ]
+        }, 
+        {
+            "start": "2012-02-01", 
+            "end": "2012-02-29", 
+            "locations": [
+                {
+                    "count": "10", 
+                    "name": "milano "
+                }, 
+                {
+                    "count": "4", 
+                    "name": "bari "
+                }, 
+                {
+                    "count": "4", 
+                    "name": "torino "
+                }, 
+                {
+                    "count": "3", 
+                    "name": "roma "
+                }, 
+                {
+                    "count": "2", 
+                    "name": "andria "
+                }, 
+                {
+                    "count": "2", 
+                    "name": "borgo san lorenzo "
+                }, 
+                {
+                    "count": "2", 
+                    "name": "brennero "
+                }, 
+                {
+                    "count": "2", 
+                    "name": "campi bisenzio "
+                }, 
+                {
+                    "count": "2", 
+                    "name": "cortona "
+                }, 
+                {
+                    "count": "2", 
+                    "name": "firenze "
+                }
+            ], 
+            "companies": [
+                {
+                    "count": "3", 
+                    "name": "asl "
+                }, 
+                {
+                    "count": "3", 
+                    "name": "microsoft "
+                }, 
+                {
+                    "count": "2", 
+                    "name": "fujitsu "
+                }, 
+                {
+                    "count": "2", 
+                    "name": "posti "
+                }, 
+                {
+                    "count": "2", 
+                    "name": "tintoretto "
+                }, 
+                {
+                    "count": "1", 
+                    "name": "azure "
+                }, 
+                {
+                    "count": "1", 
+                    "name": "di telecom. "
+                }, 
+                {
+                    "count": "1", 
+                    "name": "dometic "
+                }, 
+                {
+                    "count": "1", 
+                    "name": "electrolux "
+                }
+            ], 
+            "people": [
+                {
+                    "count": "1", 
+                    "name": "alessandro longo "
+                }, 
+                {
+                    "count": "1", 
+                    "name": "confindustria digitale). "
+                }, 
+                {
+                    "count": "1", 
+                    "name": "cristoforo morandini "
+                }, 
+                {
+                    "count": "1", 
+                    "name": "maurizio d\u00e8cina "
+                }, 
+                {
+                    "count": "1", 
+                    "name": "maximo ibarra "
+                }, 
+                {
+                    "count": "1", 
+                    "name": "oscar cicchetti "
+                }, 
+                {
+                    "count": "1", 
+                    "name": "stefano parisse "
+                }, 
+                {
+                    "count": "1", 
+                    "name": "tim, wind "
+                }
+            ]
+        }, 
+        {
+            "start": "2012-03-01", 
+            "end": "2012-03-31", 
+            "locations": [
+                {
+                    "count": "14", 
+                    "name": "milano "
+                }, 
+                {
+                    "count": "10", 
+                    "name": " milano "
+                }, 
+                {
+                    "count": "4", 
+                    "name": " torino "
+                }, 
+                {
+                    "count": "3", 
+                    "name": " firenze "
+                }, 
+                {
+                    "count": "3", 
+                    "name": " modena "
+                }, 
+                {
+                    "count": "3", 
+                    "name": " pisa "
+                }, 
+                {
+                    "count": "3", 
+                    "name": " roma "
+                }, 
+                {
+                    "count": "3", 
+                    "name": " trento "
+                }, 
+                {
+                    "count": "2", 
+                    "name": " bari "
+                }, 
+                {
+                    "count": "2", 
+                    "name": " cagliari "
+                }
+            ], 
+            "companies": [
+                {
+                    "count": "2", 
+                    "name": "apple "
+                }, 
+                {
+                    "count": "2", 
+                    "name": "confindustria "
+                }, 
+                {
+                    "count": "2", 
+                    "name": "google "
+                }, 
+                {
+                    "count": "1", 
+                    "name": " carnival "
+                }, 
+                {
+                    "count": "1", 
+                    "name": " costa crociere "
+                }, 
+                {
+                    "count": "1", 
+                    "name": "amazon "
+                }, 
+                {
+                    "count": "1", 
+                    "name": "business school "
+                }, 
+                {
+                    "count": "1", 
+                    "name": "cariplo "
+                }, 
+                {
+                    "count": "1", 
+                    "name": "enel "
+                }
+            ], 
+            "people": [
+                {
+                    "count": "luca de vito", 
+                    "name": ""
+                }, 
+                {
+                    "count": "1", 
+                    "name": "silvio berlusconi "
+                }
+            ]
+        }, 
+        {
+            "start": "2012-04-01", 
+            "end": "2012-04-30", 
+            "locations": [
+                {
+                    "count": "13", 
+                    "name": "milano "
+                }, 
+                {
+                    "count": "10", 
+                    "name": " milano "
+                }, 
+                {
+                    "count": "3", 
+                    "name": "roma "
+                }, 
+                {
+                    "count": "2", 
+                    "name": " monti "
+                }, 
+                {
+                    "count": "2", 
+                    "name": " new york "
+                }, 
+                {
+                    "count": "2", 
+                    "name": " roma "
+                }, 
+                {
+                    "count": "2", 
+                    "name": " torino "
+                }, 
+                {
+                    "count": "2", 
+                    "name": "bologna "
+                }, 
+                {
+                    "count": "2", 
+                    "name": "conversano "
+                }, 
+                {
+                    "count": "2", 
+                    "name": "napoli "
+                }
+            ], 
+            "companies": [
+                {
+                    "count": "3", 
+                    "name": "apple "
+                }, 
+                {
+                    "count": "2", 
+                    "name": " google "
+                }, 
+                {
+                    "count": "2", 
+                    "name": " nokia "
+                }, 
+                {
+                    "count": "2", 
+                    "name": " samsung "
+                }, 
+                {
+                    "count": "2", 
+                    "name": " starbucks "
+                }, 
+                {
+                    "count": "2", 
+                    "name": " telecom italia "
+                }, 
+                {
+                    "count": "2", 
+                    "name": "google "
+                }, 
+                {
+                    "count": "1", 
+                    "name": " costa crociere "
+                }, 
+                {
+                    "count": "1", 
+                    "name": "business school "
+                }
+            ], 
+            "people": [
+                {
+                    "count": "2", 
+                    "name": "giuseppe orsi "
+                }, 
+                {
+                    "count": "2", 
+                    "name": "luca pagni "
+                }, 
+                {
+                    "count": "2", 
+                    "name": "pier francesco guarguaglini "
+                }, 
+                {
+                    "count": "1", 
+                    "name": "emilio matricciani "
+                }, 
+                {
+                    "count": "1", 
+                    "name": "giovanni azzone "
+                }, 
+                {
+                    "count": "1", 
+                    "name": "ilaria valente "
+                }, 
+                {
+                    "count": "1", 
+                    "name": "pier carlo palermo "
+                }
+            ]
+        }, 
+        {
+            "start": "2012-05-01", 
+            "end": "2012-05-31", 
+            "locations": [
+                {
+                    "count": "17", 
+                    "name": "milano "
+                }, 
+                {
+                    "count": "3", 
+                    "name": "torino "
+                }, 
+                {
+                    "count": "2", 
+                    "name": " milano "
+                }, 
+                {
+                    "count": "1", 
+                    "name": " mello "
+                }, 
+                {
+                    "count": "1", 
+                    "name": " monti "
+                }, 
+                {
+                    "count": "1", 
+                    "name": " napoli "
+                }, 
+                {
+                    "count": "1", 
+                    "name": " poli "
+                }, 
+                {
+                    "count": "1", 
+                    "name": " salerno "
+                }, 
+                {
+                    "count": "1", 
+                    "name": " torino "
+                }, 
+                {
+                    "count": "1", 
+                    "name": " trino "
+                }
+            ], 
+            "companies": [
+                {
+                    "count": "1", 
+                    "name": "adi "
+                }, 
+                {
+                    "count": "1", 
+                    "name": "atm "
+                }, 
+                {
+                    "count": "1", 
+                    "name": "business school "
+                }, 
+                {
+                    "count": "1", 
+                    "name": "eni "
+                }, 
+                {
+                    "count": "1", 
+                    "name": "fastweb "
+                }, 
+                {
+                    "count": "1", 
+                    "name": "ferrari "
+                }, 
+                {
+                    "count": "1", 
+                    "name": "green technology "
+                }, 
+                {
+                    "count": "1", 
+                    "name": "hewlett-packard "
+                }, 
+                {
+                    "count": "1", 
+                    "name": "mercedes-benz "
+                }
+            ], 
+            "people": [
+                {
+                    "count": "1", 
+                    "name": "giulio natta "
+                }, 
+                {
+                    "count": "1", 
+                    "name": "marco polo "
+                }, 
+                {
+                    "count": "1", 
+                    "name": "silvio berlusconi "
+                }
+            ]
+        }, 
+        {
+            "start": "2012-06-01", 
+            "end": "2012-06-30", 
+            "locations": [
+                {
+                    "count": "37", 
+                    "name": "milano "
+                }, 
+                {
+                    "count": "10", 
+                    "name": "italia "
+                }, 
+                {
+                    "count": "6", 
+                    "name": "bari "
+                }, 
+                {
+                    "count": "4", 
+                    "name": "roma "
+                }, 
+                {
+                    "count": "4", 
+                    "name": "torino "
+                }, 
+                {
+                    "count": "3", 
+                    "name": "monti "
+                }, 
+                {
+                    "count": "2", 
+                    "name": "anzi "
+                }, 
+                {
+                    "count": "2", 
+                    "name": "app store "
+                }, 
+                {
+                    "count": "2", 
+                    "name": "bologna "
+                }, 
+                {
+                    "count": "2", 
+                    "name": "cassino "
+                }
+            ], 
+            "companies": [
+                {
+                    "count": "3", 
+                    "name": "google "
+                }, 
+                {
+                    "count": "3", 
+                    "name": "twitter "
+                }, 
+                {
+                    "count": "2", 
+                    "name": "apple "
+                }, 
+                {
+                    "count": "2", 
+                    "name": "camera "
+                }, 
+                {
+                    "count": "2", 
+                    "name": "commissione europea "
+                }, 
+                {
+                    "count": "2", 
+                    "name": "governo "
+                }, 
+                {
+                    "count": "2", 
+                    "name": "juniper research "
+                }, 
+                {
+                    "count": "2", 
+                    "name": "school of management-politecnico "
+                }, 
+                {
+                    "count": "2", 
+                    "name": "senato "
+                }
+            ], 
+            "people": [
+                {
+                    "count": "3", 
+                    "name": "antonio martusciello "
+                }, 
+                {
+                    "count": "3", 
+                    "name": "antonio preto "
+                }, 
+                {
+                    "count": "3", 
+                    "name": "antonio tajani "
+                }, 
+                {
+                    "count": "3", 
+                    "name": "francesco profumo "
+                }, 
+                {
+                    "count": "3", 
+                    "name": "stefano quintarelli "
+                }, 
+                {
+                    "count": "2", 
+                    "name": "agcom "
+                }, 
+                {
+                    "count": "2", 
+                    "name": "alessandro longo "
+                }, 
+                {
+                    "count": "2", 
+                    "name": "berlusconi "
+                }, 
+                {
+                    "count": "2", 
+                    "name": "di pietro "
+                }
+            ]
+        }, 
+        {
+            "start": "2012-07-01", 
+            "end": "2012-07-31", 
+            "locations": [
+                {
+                    "count": "32", 
+                    "name": "milano "
+                }, 
+                {
+                    "count": "10", 
+                    "name": "italia "
+                }, 
+                {
+                    "count": "9", 
+                    "name": "torino "
+                }, 
+                {
+                    "count": "6", 
+                    "name": "bologna "
+                }, 
+                {
+                    "count": "5", 
+                    "name": "genova "
+                }, 
+                {
+                    "count": "4", 
+                    "name": "firenze "
+                }, 
+                {
+                    "count": "4", 
+                    "name": "venezia "
+                }, 
+                {
+                    "count": "3", 
+                    "name": "cina "
+                }, 
+                {
+                    "count": "3", 
+                    "name": "roma "
+                }
+            ], 
+            "companies": [
+                {
+                    "count": "3", 
+                    "name": "general electric "
+                }, 
+                {
+                    "count": "3", 
+                    "name": "paypal "
+                }, 
+                {
+                    "count": "3", 
+                    "name": "philips "
+                }, 
+                {
+                    "count": "2", 
+                    "name": "business school "
+                }, 
+                {
+                    "count": "2", 
+                    "name": "ilva "
+                }, 
+                {
+                    "count": "2", 
+                    "name": "radio capital "
+                }, 
+                {
+                    "count": "2", 
+                    "name": "samsung "
+                }, 
+                {
+                    "count": "2", 
+                    "name": "school of management "
+                }, 
+                {
+                    "count": "1", 
+                    "name": "apple "
+                }
+            ], 
+            "people": [
+                {
+                    "count": "2", 
+                    "name": "andrea lucatello "
+                }, 
+                {
+                    "count": "2", 
+                    "name": "belle arti "
+                }, 
+                {
+                    "count": "2", 
+                    "name": "fabio sdogati "
+                }, 
+                {
+                    "count": "1", 
+                    "name": "alessandro fusacchia "
+                }, 
+                {
+                    "count": "1", 
+                    "name": "alessia moltani "
+                }, 
+                {
+                    "count": "1", 
+                    "name": "alessia montani "
+                }, 
+                {
+                    "count": "1", 
+                    "name": "alfonso fuggetta "
+                }, 
+                {
+                    "count": "1", 
+                    "name": "alta capacit\u00e0 merci "
+                }, 
+                {
+                    "count": "1", 
+                    "name": "arturo di "
+                }
+            ]
+        }, 
+        {
+            "start": "2012-08-01", 
+            "end": "2012-08-31", 
+            "locations": [
+                {
+                    "count": "10", 
+                    "name": "milano "
+                }, 
+                {
+                    "count": "3", 
+                    "name": "italia "
+                }, 
+                {
+                    "count": "3", 
+                    "name": "torino "
+                }, 
+                {
+                    "count": "2", 
+                    "name": "bologna "
+                }, 
+                {
+                    "count": "2", 
+                    "name": "francia "
+                }, 
+                {
+                    "count": "2", 
+                    "name": "germania "
+                }, 
+                {
+                    "count": "2", 
+                    "name": "parma "
+                }, 
+                {
+                    "count": "1", 
+                    "name": "50 megabit "
+                }, 
+                {
+                    "count": "1", 
+                    "name": "alessandria "
+                }, 
+                {
+                    "count": "1", 
+                    "name": "america "
+                }
+            ], 
+            "companies": [
+                {
+                    "count": "2", 
+                    "name": "astaldi "
+                }, 
+                {
+                    "count": "1", 
+                    "name": "commissione "
+                }, 
+                {
+                    "count": "1", 
+                    "name": "commissione europea "
+                }, 
+                {
+                    "count": "1", 
+                    "name": "comunit\u00e0 europea "
+                }, 
+                {
+                    "count": "1", 
+                    "name": "dell'unione europea "
+                }, 
+                {
+                    "count": "1", 
+                    "name": "harvard "
+                }, 
+                {
+                    "count": "1", 
+                    "name": "jiao tong' university "
+                }, 
+                {
+                    "count": "1", 
+                    "name": "l'unione europea "
+                }, 
+                {
+                    "count": "1", 
+                    "name": "parmalat "
+                }
+            ], 
+            "people": [
+                {
+                    "count": "1", 
+                    "name": "agcom "
+                }, 
+                {
+                    "count": "1", 
+                    "name": "alessandro longo "
+                }, 
+                {
+                    "count": "1", 
+                    "name": "andrea gilardoni "
+                }, 
+                {
+                    "count": "1", 
+                    "name": "architettura. "
+                }, 
+                {
+                    "count": "1", 
+                    "name": "brescia, torino "
+                }, 
+                {
+                    "count": "1", 
+                    "name": "federico ii "
+                }, 
+                {
+                    "count": "1", 
+                    "name": "francesco sacco "
+                }, 
+                {
+                    "count": "1", 
+                    "name": "franco bernab\u00e8 "
+                }, 
+                {
+                    "count": "1", 
+                    "name": "franco bernab\u00e8.una "
+                }
+            ]
+        }, 
+        {
+            "start": "2012-09-01", 
+            "end": "2012-09-30", 
+            "locations": [
+                {
+                    "count": "15", 
+                    "name": "milano "
+                }, 
+                {
+                    "count": "4", 
+                    "name": "firenze "
+                }, 
+                {
+                    "count": "4", 
+                    "name": "italia "
+                }, 
+                {
+                    "count": "2", 
+                    "name": "cologno monzese "
+                }, 
+                {
+                    "count": "2", 
+                    "name": "parma "
+                }, 
+                {
+                    "count": "2", 
+                    "name": "poli "
+                }, 
+                {
+                    "count": "2", 
+                    "name": "roma "
+                }, 
+                {
+                    "count": "2", 
+                    "name": "taranto "
+                }, 
+                {
+                    "count": "2", 
+                    "name": "torino "
+                }, 
+                {
+                    "count": "2", 
+                    "name": "trapani "
+                }
+            ], 
+            "companies": [
+                {
+                    "count": "2", 
+                    "name": "apple "
+                }, 
+                {
+                    "count": "2", 
+                    "name": "mediaset "
+                }, 
+                {
+                    "count": "2", 
+                    "name": "sipra "
+                }, 
+                {
+                    "count": "1", 
+                    "name": "amazon "
+                }, 
+                {
+                    "count": "1", 
+                    "name": "consiglio di amministrazione "
+                }, 
+                {
+                    "count": "1", 
+                    "name": "corriere delle comunicazioni "
+                }, 
+                {
+                    "count": "1", 
+                    "name": "dell "
+                }, 
+                {
+                    "count": "1", 
+                    "name": "ericsson "
+                }, 
+                {
+                    "count": "1", 
+                    "name": "esaote "
+                }
+            ], 
+            "people": [
+                {
+                    "count": "2", 
+                    "name": "andrea rangone "
+                }, 
+                {
+                    "count": "1", 
+                    "name": "aiman el "
+                }, 
+                {
+                    "count": "1", 
+                    "name": "alessandro longo "
+                }, 
+                {
+                    "count": "1", 
+                    "name": "andrea bianchi "
+                }, 
+                {
+                    "count": "1", 
+                    "name": "brugnoli "
+                }, 
+                {
+                    "count": "1", 
+                    "name": "carlo barlocco "
+                }, 
+                {
+                    "count": "1", 
+                    "name": "carlo maria medaglia "
+                }, 
+                {
+                    "count": "1", 
+                    "name": "castel mella "
+                }, 
+                {
+                    "count": "1", 
+                    "name": "d'italia "
+                }
+            ]
+        }, 
+        {
+            "start": "2012-10-01", 
+            "end": "2012-10-31", 
+            "locations": [
+                {
+                    "count": "22", 
+                    "name": "milano "
+                }, 
+                {
+                    "count": "11", 
+                    "name": "italia "
+                }, 
+                {
+                    "count": "4", 
+                    "name": "firenze "
+                }, 
+                {
+                    "count": "4", 
+                    "name": "torino "
+                }, 
+                {
+                    "count": "3", 
+                    "name": "londra "
+                }, 
+                {
+                    "count": "3", 
+                    "name": "parma "
+                }, 
+                {
+                    "count": "3", 
+                    "name": "roma "
+                }, 
+                {
+                    "count": "2", 
+                    "name": "berlino "
+                }, 
+                {
+                    "count": "2", 
+                    "name": "cina "
+                }, 
+                {
+                    "count": "2", 
+                    "name": "madrid "
+                }
+            ], 
+            "companies": [
+                {
+                    "count": "3", 
+                    "name": "apple "
+                }, 
+                {
+                    "count": "3", 
+                    "name": "google "
+                }, 
+                {
+                    "count": "3", 
+                    "name": "microsoft "
+                }, 
+                {
+                    "count": "2", 
+                    "name": "american express "
+                }, 
+                {
+                    "count": "2", 
+                    "name": "bnl "
+                }, 
+                {
+                    "count": "2", 
+                    "name": "cisco "
+                }, 
+                {
+                    "count": "2", 
+                    "name": "expedia "
+                }, 
+                {
+                    "count": "2", 
+                    "name": "gartner "
+                }, 
+                {
+                    "count": "2", 
+                    "name": "ibm "
+                }
+            ], 
+            "people": [
+                {
+                    "count": "2", 
+                    "name": "giancarlo capitani "
+                }, 
+                {
+                    "count": "1", 
+                    "name": "\"ulisse dini\" "
+                }, 
+                {
+                    "count": "1", 
+                    "name": "adriano engelbrecht "
+                }, 
+                {
+                    "count": "1", 
+                    "name": "alessandra luksch "
+                }, 
+                {
+                    "count": "1", 
+                    "name": "alessandro ovi "
+                }, 
+                {
+                    "count": "1", 
+                    "name": "alex zanardi "
+                }, 
+                {
+                    "count": "1", 
+                    "name": "alice mazzini "
+                }, 
+                {
+                    "count": "1", 
+                    "name": "allison crowe "
+                }, 
+                {
+                    "count": "1", 
+                    "name": "alvise biffi "
+                }
+            ]
+        }, 
+        {
+            "start": "2012-11-01", 
+            "end": "2012-11-30", 
+            "locations": [
+                {
+                    "count": "26", 
+                    "name": "milano "
+                }, 
+                {
+                    "count": "8", 
+                    "name": "italia "
+                }, 
+                {
+                    "count": "7", 
+                    "name": "roma "
+                }, 
+                {
+                    "count": "3", 
+                    "name": "bologna "
+                }, 
+                {
+                    "count": "3", 
+                    "name": "firenze "
+                }, 
+                {
+                    "count": "3", 
+                    "name": "l'italia "
+                }, 
+                {
+                    "count": "3", 
+                    "name": "napoli "
+                }, 
+                {
+                    "count": "2", 
+                    "name": "como "
+                }, 
+                {
+                    "count": "2", 
+                    "name": "genova "
+                }, 
+                {
+                    "count": "2", 
+                    "name": "palermo "
+                }
+            ], 
+            "companies": [
+                {
+                    "count": "3", 
+                    "name": "google "
+                }, 
+                {
+                    "count": "3", 
+                    "name": "twitter "
+                }, 
+                {
+                    "count": "2", 
+                    "name": "amazon "
+                }, 
+                {
+                    "count": "2", 
+                    "name": "ebay "
+                }, 
+                {
+                    "count": "2", 
+                    "name": "facebook "
+                }, 
+                {
+                    "count": "1", 
+                    "name": "all'idv "
+                }, 
+                {
+                    "count": "1", 
+                    "name": "astral media "
+                }, 
+                {
+                    "count": "1", 
+                    "name": "autostrade "
+                }, 
+                {
+                    "count": "1", 
+                    "name": "business integrated solutions "
+                }
+            ], 
+            "people": [
+                {
+                    "count": "2", 
+                    "name": "bersani "
+                }, 
+                {
+                    "count": "2", 
+                    "name": "bruno tabacci "
+                }, 
+                {
+                    "count": "2", 
+                    "name": "laura puppato "
+                }, 
+                {
+                    "count": "2", 
+                    "name": "matteo renzi "
+                }, 
+                {
+                    "count": "2", 
+                    "name": "pierluigi bersani "
+                }, 
+                {
+                    "count": "1", 
+                    "name": "alcantara "
+                }, 
+                {
+                    "count": "1", 
+                    "name": "alcantara sentirsi "
+                }, 
+                {
+                    "count": "1", 
+                    "name": "alessandro piva "
+                }, 
+                {
+                    "count": "1", 
+                    "name": "amory lovins "
+                }
+            ]
+        }, 
+        {
+            "start": "2012-12-01", 
+            "end": "2012-12-31", 
+            "locations": [
+                {
+                    "count": "30", 
+                    "name": "milano "
+                }, 
+                {
+                    "count": "10", 
+                    "name": "italia "
+                }, 
+                {
+                    "count": "4", 
+                    "name": "roma "
+                }, 
+                {
+                    "count": "3", 
+                    "name": "napoli "
+                }, 
+                {
+                    "count": "3", 
+                    "name": "poli "
+                }, 
+                {
+                    "count": "3", 
+                    "name": "venezia "
+                }, 
+                {
+                    "count": "2", 
+                    "name": "alessandria "
+                }, 
+                {
+                    "count": "2", 
+                    "name": "anzi "
+                }, 
+                {
+                    "count": "2", 
+                    "name": "firenze "
+                }, 
+                {
+                    "count": "2", 
+                    "name": "noci "
+                }
+            ], 
+            "companies": [
+                {
+                    "count": "5", 
+                    "name": "amazon "
+                }, 
+                {
+                    "count": "5", 
+                    "name": "microsoft "
+                }, 
+                {
+                    "count": "4", 
+                    "name": "ebay "
+                }, 
+                {
+                    "count": "3", 
+                    "name": "paypal "
+                }, 
+                {
+                    "count": "2", 
+                    "name": "auchan "
+                }, 
+                {
+                    "count": "2", 
+                    "name": "confindustria "
+                }, 
+                {
+                    "count": "2", 
+                    "name": "facebook "
+                }, 
+                {
+                    "count": "2", 
+                    "name": "google "
+                }, 
+                {
+                    "count": "2", 
+                    "name": "olivetti "
+                }
+            ], 
+            "people": [
+                {
+                    "count": "2", 
+                    "name": "giovanni azzone "
+                }, 
+                {
+                    "count": "1", 
+                    "name": "agostino ragosa "
+                }, 
+                {
+                    "count": "1", 
+                    "name": "aldo tichy "
+                }, 
+                {
+                    "count": "1", 
+                    "name": "alessandro longo "
+                }, 
+                {
+                    "count": "1", 
+                    "name": "alfonso fuggetta "
+                }, 
+                {
+                    "count": "1", 
+                    "name": "anna politkovskaja "
+                }, 
+                {
+                    "count": "1", 
+                    "name": "anna stepanovna politkovskaja "
+                }, 
+                {
+                    "count": "1", 
+                    "name": "antenore vicari "
+                }, 
+                {
+                    "count": "1", 
+                    "name": "bob kahn "
+                }
+            ]
+        }, 
+        {
+            "start": "2013-01-01", 
+            "end": "2013-01-31", 
+            "locations": [
+                {
+                    "count": "13", 
+                    "name": "milano "
+                }, 
+                {
+                    "count": "4", 
+                    "name": "italia "
+                }, 
+                {
+                    "count": "3", 
+                    "name": "torino "
+                }, 
+                {
+                    "count": "2", 
+                    "name": "europa "
+                }, 
+                {
+                    "count": "2", 
+                    "name": "germania "
+                }, 
+                {
+                    "count": "2", 
+                    "name": "lentini "
+                }, 
+                {
+                    "count": "2", 
+                    "name": "pachino "
+                }, 
+                {
+                    "count": "2", 
+                    "name": "pantelleria "
+                }, 
+                {
+                    "count": "2", 
+                    "name": "roma "
+                }, 
+                {
+                    "count": "2", 
+                    "name": "usa "
+                }
+            ], 
+            "companies": [
+                {
+                    "count": "2", 
+                    "name": "facebook "
+                }, 
+                {
+                    "count": "1", 
+                    "name": "\"international society for ecological economics\" "
+                }, 
+                {
+                    "count": "1", 
+                    "name": "bogazici university "
+                }, 
+                {
+                    "count": "1", 
+                    "name": "brno university of technology "
+                }, 
+                {
+                    "count": "1", 
+                    "name": "del mit "
+                }, 
+                {
+                    "count": "1", 
+                    "name": "della nato "
+                }, 
+                {
+                    "count": "1", 
+                    "name": "dijon bourgogne, university of craiova "
+                }, 
+                {
+                    "count": "1", 
+                    "name": "eurofighter "
+                }, 
+                {
+                    "count": "1", 
+                    "name": "fastweb "
+                }
+            ], 
+            "people": [
+                {
+                    "count": "1", 
+                    "name": "africae medioriente "
+                }, 
+                {
+                    "count": "1", 
+                    "name": "alessandro longo "
+                }, 
+                {
+                    "count": "1", 
+                    "name": "alfonso di stefano "
+                }, 
+                {
+                    "count": "1", 
+                    "name": "alfonso fuggetta "
+                }, 
+                {
+                    "count": "1", 
+                    "name": "annamaria cancellieri "
+                }, 
+                {
+                    "count": "1", 
+                    "name": "antonio mazzeo "
+                }, 
+                {
+                    "count": "1", 
+                    "name": "bari, genova "
+                }, 
+                {
+                    "count": "1", 
+                    "name": "bina agarwal "
+                }, 
+                {
+                    "count": "1", 
+                    "name": "brescia "
+                }
+            ]
+        }, 
+        {
+            "start": "2013-02-01", 
+            "end": "2013-02-28", 
+            "locations": [
+                {
+                    "count": "27", 
+                    "name": "milano "
+                }, 
+                {
+                    "count": "8", 
+                    "name": "italia "
+                }, 
+                {
+                    "count": "5", 
+                    "name": "roma "
+                }, 
+                {
+                    "count": "4", 
+                    "name": "new york "
+                }, 
+                {
+                    "count": "3", 
+                    "name": "stati uniti "
+                }, 
+                {
+                    "count": "2", 
+                    "name": "bretagna "
+                }, 
+                {
+                    "count": "2", 
+                    "name": "canada "
+                }, 
+                {
+                    "count": "2", 
+                    "name": "europa "
+                }, 
+                {
+                    "count": "2", 
+                    "name": "ivrea "
+                }, 
+                {
+                    "count": "2", 
+                    "name": "milano. "
+                }
+            ], 
+            "companies": [
+                {
+                    "count": "4", 
+                    "name": "apple "
+                }, 
+                {
+                    "count": "3", 
+                    "name": "rim "
+                }, 
+                {
+                    "count": "3", 
+                    "name": "samsung "
+                }, 
+                {
+                    "count": "2", 
+                    "name": "bernstein research "
+                }, 
+                {
+                    "count": "2", 
+                    "name": "di apple "
+                }, 
+                {
+                    "count": "2", 
+                    "name": "microsoft "
+                }, 
+                {
+                    "count": "2", 
+                    "name": "olivetti "
+                }, 
+                {
+                    "count": "2", 
+                    "name": "tesco "
+                }, 
+                {
+                    "count": "2", 
+                    "name": "youtube "
+                }
+            ], 
+            "people": [
+                {
+                    "count": "3", 
+                    "name": "andrea rangone "
+                }, 
+                {
+                    "count": "2", 
+                    "name": "alberto acito "
+                }, 
+                {
+                    "count": "2", 
+                    "name": "ceo thorsten heins "
+                }, 
+                {
+                    "count": "2", 
+                    "name": "jim balsillie "
+                }, 
+                {
+                    "count": "2", 
+                    "name": "mike lazaridis "
+                }, 
+                {
+                    "count": "2", 
+                    "name": "thorsten heins "
+                }, 
+                {
+                    "count": "1", 
+                    "name": "alberto fiorillo "
+                }, 
+                {
+                    "count": "1", 
+                    "name": "alessandro belli "
+                }, 
+                {
+                    "count": "1", 
+                    "name": "alessandro ferraro "
+                }
+            ]
+        }, 
+        {
+            "start": "2013-03-01", 
+            "end": "2013-03-31", 
+            "locations": [
+                {
+                    "count": "39", 
+                    "name": "milano "
+                }, 
+                {
+                    "count": "15", 
+                    "name": "italia "
+                }, 
+                {
+                    "count": "5", 
+                    "name": "firenze "
+                }, 
+                {
+                    "count": "5", 
+                    "name": "napoli "
+                }, 
+                {
+                    "count": "5", 
+                    "name": "roma "
+                }, 
+                {
+                    "count": "3", 
+                    "name": "europa "
+                }, 
+                {
+                    "count": "2", 
+                    "name": "alessandria "
+                }, 
+                {
+                    "count": "2", 
+                    "name": "germania "
+                }, 
+                {
+                    "count": "2", 
+                    "name": "grecia "
+                }, 
+                {
+                    "count": "2", 
+                    "name": "marino "
+                }
+            ], 
+            "companies": [
+                {
+                    "count": "3", 
+                    "name": "apple "
+                }, 
+                {
+                    "count": "2", 
+                    "name": "avnet technology solutions "
+                }, 
+                {
+                    "count": "2", 
+                    "name": "bmw "
+                }, 
+                {
+                    "count": "2", 
+                    "name": "bmw group "
+                }, 
+                {
+                    "count": "2", 
+                    "name": "futura "
+                }, 
+                {
+                    "count": "2", 
+                    "name": "google "
+                }, 
+                {
+                    "count": "2", 
+                    "name": "intesa sanpaolo "
+                }, 
+                {
+                    "count": "2", 
+                    "name": "kelly services "
+                }, 
+                {
+                    "count": "2", 
+                    "name": "microsoft "
+                }
+            ], 
+            "people": [
+                {
+                    "count": "2", 
+                    "name": "valeria portale "
+                }, 
+                {
+                    "count": "1", 
+                    "name": "adalberto santi "
+                }, 
+                {
+                    "count": "1", 
+                    "name": "agnese tamburrini "
+                }, 
+                {
+                    "count": "1", 
+                    "name": "alberto chiandetti "
+                }, 
+                {
+                    "count": "1", 
+                    "name": "alberto de antoni "
+                }, 
+                {
+                    "count": "1", 
+                    "name": "alberto d\u2019avenia "
+                }, 
+                {
+                    "count": "1", 
+                    "name": "alessandra carosi "
+                }, 
+                {
+                    "count": "1", 
+                    "name": "alessandro perego\u00bb "
+                }, 
+                {
+                    "count": "1", 
+                    "name": "anand mahindra "
+                }
+            ]
+        }, 
+        {
+            "start": "2013-04-01", 
+            "end": "2013-04-30", 
+            "locations": [
+                {
+                    "count": "23", 
+                    "name": "milano "
+                }, 
+                {
+                    "count": "8", 
+                    "name": "italia "
+                }, 
+                {
+                    "count": "5", 
+                    "name": "europa "
+                }, 
+                {
+                    "count": "4", 
+                    "name": "napoli "
+                }, 
+                {
+                    "count": "4", 
+                    "name": "roma "
+                }, 
+                {
+                    "count": "3", 
+                    "name": "cina "
+                }, 
+                {
+                    "count": "3", 
+                    "name": "venezia "
+                }, 
+                {
+                    "count": "2", 
+                    "name": "brasile "
+                }, 
+                {
+                    "count": "2", 
+                    "name": "como "
+                }, 
+                {
+                    "count": "2", 
+                    "name": "d'europa "
+                }
+            ], 
+            "companies": [
+                {
+                    "count": "2", 
+                    "name": "brembo "
+                }, 
+                {
+                    "count": "2", 
+                    "name": "bulgari "
+                }, 
+                {
+                    "count": "2", 
+                    "name": "che "
+                }, 
+                {
+                    "count": "2", 
+                    "name": "chrysler "
+                }, 
+                {
+                    "count": "2", 
+                    "name": "de longhi "
+                }, 
+                {
+                    "count": "2", 
+                    "name": "europea "
+                }, 
+                {
+                    "count": "2", 
+                    "name": "finmeccanica "
+                }, 
+                {
+                    "count": "2", 
+                    "name": "parmalat "
+                }, 
+                {
+                    "count": "1", 
+                    "name": "banco alimentare "
+                }
+            ], 
+            "people": [
+                {
+                    "count": "2", 
+                    "name": "maria spena "
+                }, 
+                {
+                    "count": "2", 
+                    "name": "ponti "
+                }, 
+                {
+                    "count": "2", 
+                    "name": "rio de janeiro. "
+                }, 
+                {
+                    "count": "2", 
+                    "name": "sonia cossu "
+                }, 
+                {
+                    "count": "1", 
+                    "name": "/> "
+                }, 
+                {
+                    "count": "1", 
+                    "name": "alessandro appiani "
+                }, 
+                {
+                    "count": "1", 
+                    "name": "alessandro chiarato "
+                }, 
+                {
+                    "count": "1", 
+                    "name": "alessandro mauri "
+                }, 
+                {
+                    "count": "1", 
+                    "name": "alessandro piva "
+                }
+            ]
+        }, 
+        {
+            "start": "2013-05-01", 
+            "end": "2013-05-31", 
+            "locations": [
+                {
+                    "count": "33", 
+                    "name": "milano "
+                }, 
+                {
+                    "count": "9", 
+                    "name": "italia "
+                }, 
+                {
+                    "count": "5", 
+                    "name": "roma "
+                }, 
+                {
+                    "count": "4", 
+                    "name": "torino "
+                }, 
+                {
+                    "count": "3", 
+                    "name": "europa "
+                }, 
+                {
+                    "count": "2", 
+                    "name": "firenze "
+                }, 
+                {
+                    "count": "2", 
+                    "name": "framura "
+                }, 
+                {
+                    "count": "2", 
+                    "name": "genova "
+                }, 
+                {
+                    "count": "2", 
+                    "name": "modena "
+                }, 
+                {
+                    "count": "2", 
+                    "name": "venezia "
+                }
+            ], 
+            "companies": [
+                {
+                    "count": "2", 
+                    "name": "bnl "
+                }, 
+                {
+                    "count": "2", 
+                    "name": "pirelli "
+                }, 
+                {
+                    "count": "2", 
+                    "name": "school of management "
+                }, 
+                {
+                    "count": "2", 
+                    "name": "unicredit "
+                }, 
+                {
+                    "count": "1", 
+                    "name": "andrea "
+                }, 
+                {
+                    "count": "1", 
+                    "name": "aquila "
+                }, 
+                {
+                    "count": "1", 
+                    "name": "asl "
+                }, 
+                {
+                    "count": "1", 
+                    "name": "assicurazioni generali "
+                }, 
+                {
+                    "count": "1", 
+                    "name": "banca mondiale "
+                }
+            ], 
+            "people": [
+                {
+                    "count": "1", 
+                    "name": "\"vico magistretti "
+                }, 
+                {
+                    "count": "1", 
+                    "name": "agostino petrillo "
+                }, 
+                {
+                    "count": "1", 
+                    "name": "al labs "
+                }, 
+                {
+                    "count": "1", 
+                    "name": "alberto d\u2019avenia "
+                }, 
+                {
+                    "count": "1", 
+                    "name": "alberto mariotti "
+                }, 
+                {
+                    "count": "1", 
+                    "name": "alessandro perego "
+                }, 
+                {
+                    "count": "1", 
+                    "name": "alla scoperta "
+                }, 
+                {
+                    "count": "1", 
+                    "name": "andrea da passano, sindaco "
+                }, 
+                {
+                    "count": "1", 
+                    "name": "andrea provana "
+                }
+            ]
+        }, 
+        {
+            "start": "2013-06-01", 
+            "end": "2013-06-30", 
+            "locations": [
+                {
+                    "count": "41", 
+                    "name": "milano "
+                }, 
+                {
+                    "count": "14", 
+                    "name": "italia "
+                }, 
+                {
+                    "count": "6", 
+                    "name": "roma "
+                }, 
+                {
+                    "count": "3", 
+                    "name": "europa "
+                }, 
+                {
+                    "count": "3", 
+                    "name": "regno unito "
+                }, 
+                {
+                    "count": "3", 
+                    "name": "viareggio "
+                }, 
+                {
+                    "count": "2", 
+                    "name": "genova "
+                }, 
+                {
+                    "count": "2", 
+                    "name": "germania "
+                }, 
+                {
+                    "count": "2", 
+                    "name": "l'italia "
+                }, 
+                {
+                    "count": "2", 
+                    "name": "lucca "
+                }
+            ], 
+            "companies": [
+                {
+                    "count": "4", 
+                    "name": "school of management "
+                }, 
+                {
+                    "count": "3", 
+                    "name": "microsoft "
+                }, 
+                {
+                    "count": "2", 
+                    "name": "fondazione politecnico "
+                }, 
+                {
+                    "count": "2", 
+                    "name": "google "
+                }, 
+                {
+                    "count": "2", 
+                    "name": "gruppo fisi "
+                }, 
+                {
+                    "count": "2", 
+                    "name": "ministero dei trasporti "
+                }, 
+                {
+                    "count": "2", 
+                    "name": "misterprice "
+                }, 
+                {
+                    "count": "2", 
+                    "name": "nokia "
+                }, 
+                {
+                    "count": "2", 
+                    "name": "pubblica amministrazione "
+                }
+            ], 
+            "people": [
+                {
+                    "count": "3", 
+                    "name": "alessandro perego "
+                }, 
+                {
+                    "count": "2", 
+                    "name": "bow "
+                }, 
+                {
+                    "count": "2", 
+                    "name": "edoardo giorgetti "
+                }, 
+                {
+                    "count": "2", 
+                    "name": "fabrizio d'errico "
+                }, 
+                {
+                    "count": "2", 
+                    "name": "gianpaolo calanchi "
+                }, 
+                {
+                    "count": "2", 
+                    "name": "luca barilla "
+                }, 
+                {
+                    "count": "2", 
+                    "name": "marco pittaluga "
+                }, 
+                {
+                    "count": "2", 
+                    "name": "matteo arpe "
+                }, 
+                {
+                    "count": "2", 
+                    "name": "paolo ainio "
+                }
+            ]
+        }
+    ]
+}

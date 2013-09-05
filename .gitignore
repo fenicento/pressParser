@@ -1,0 +1,10 @@
+*.class
+*.pyc
+*.pyo
+lol.html
+rep_arch_1984_2013.json
+rep_design_1984_2013.json
+rep_ing_1984_2013.json
+rep_poli_2012_2013.json
+stampa_polimi_1993_2013.json
+test.py
