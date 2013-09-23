@@ -7,7 +7,9 @@ import toxi.physics2d.behaviors.*;
 import peasy.*;
 import de.looksgood.ani.*;
 
-// Reference to physics world
+import java.util.Map;
+
+
 VerletPhysics2D physics;
 PeasyCam cam;
 SQLite db;
@@ -15,6 +17,8 @@ SQLite db;
 ArrayList clusters;
 ArrayList<String> links;
 
+
+HashMap<Integer, Integer> nclust = new HashMap<Integer,Integer>(); 
 // Boolean that indicates whether we draw connections or not
 boolean showPhysics = true;
 boolean showParticles = true;
@@ -26,6 +30,8 @@ PFont f;
 AttractionBehavior repulsion;
 int count=0;
 float trasp=1;
+int month=1;
+int year=1992;
 
 void setup() {
 
@@ -33,9 +39,9 @@ void setup() {
   size(1920, 1080, OPENGL);
   cam = new PeasyCam(this, 1000);
   cam.setMinimumDistance(300);
-  cam.setMaximumDistance(1000);
+  cam.setMaximumDistance(1300);
   cam.lookAt(width/2, height/2+50, 0);
-  f = createFont("Georgia", 12, true);
+  f = loadFont("lato.vlw");
   db = new SQLite( this, "press.sqlite" );  // open database file
   
   smooth(8);
@@ -43,19 +49,20 @@ void setup() {
   
   physics=new VerletPhysics2D();
   physics.setDrag(0.000001);
-  physics.setWorldBounds(new Rect(10, 10, width-10, height-10));
+  physics.setWorldBounds(new Rect(300, 300, width-300, height-300));
   repulsion= new AttractionBehavior(new Vec2D(width/2, height/2), width/2, -10);
 
   clusters=new ArrayList<Cluster>();
   // Spawn a new random graph
   //newGraph();
 
-  //diameterAni = new Ani(this, 0.7, "trasp", 0f, Ani.SINE_IN, "onStart:itsStarted,onEnd:restoreTrasp");
-  //diameterAni.end();
+  diameterAni = new Ani(this, 0.7, "trasp", 0f, Ani.SINE_IN, "onStart:itsStarted,onEnd:restoreTrasp");
+  diameterAni.end();
   
-  querydb("12","2012");
+  querydb(String.valueOf(month),String.valueOf(year));
 
   println(links);
+  textFont(f, 12);
 }
 
 // Spawn a new random graph
@@ -69,26 +76,15 @@ void newGraph() {
 
   // Create new ArrayList (clears old one)
   clusters = new ArrayList();
-
+  nextMonth();
+  querydb(String.valueOf(month),String.valueOf(year));
   // Create 8 random clusters
-  for (int i = 0; i < 8; i++) {
-    Vec2D center = new Vec2D(width/2, height/2);
-    clusters.add(new Cluster((int) random(20, 80), random(100, 300), center));
-  }
 
-  //	All clusters connect to all clusters	
-  for (int i = 0; i < clusters.size(); i++) {
-    for (int j = i+1; j < clusters.size(); j++) {
-      Cluster ci = (Cluster) clusters.get(i);
-      Cluster cj = (Cluster) clusters.get(j);
-      ci.connect(cj);
-    }
-  }
 }
 
 void draw() {
   //println(trasp);
-
+ 
   if (count <= 300) 
   {
     count++;
@@ -97,13 +93,17 @@ void draw() {
   else {
     //println("check!");
     count=0;
-    //diameterAni.start();
+    diameterAni.start();
   }
 
   // Update the physics world
   physics.update();
 
   background(0);
+  
+   fill(255);
+  textSize(40);
+  text(month+"  "+year,10,60);
   
    if (showPhysics) {
     for (int i = 0; i < clusters.size(); i++) {
@@ -148,7 +148,7 @@ void keyPressed() {
 void restoreTrasp(Ani theAni) {
   count=0;
   Ani.to(this, 0.1, "trasp", 1f, Ani.SINE_IN);
-  //newGraph();
+  newGraph();
   
 }
 
@@ -164,12 +164,14 @@ void querydb(String month, String year) {
  
  ArrayList<Node> currNodes = new ArrayList<Node>();
  links = new ArrayList<String>();
- 
+ nclust.put(1,0);
  while (db.next())
         {
           
           links.add(db.getString("source")+"-"+db.getString("target")+"-"+db.getString("value"));
-          
+          int clu= db.getInt("cluster")+1;
+          if(nclust.get(clu)!=null) nclust.put(clu,nclust.get(clu)+1);
+          else nclust.put(clu,1);
           //find sources
           boolean sfound=false;
           for(Node n : currNodes) {
@@ -180,7 +182,7 @@ void querydb(String month, String year) {
             }
           }
           if(!sfound) {
-            currNodes.add(new Node(random(-800,800),db.getString("source"),1));
+            currNodes.add(new Node(random(-800,800),db.getString("source"),1,db.getInt("cluster")));
           }
           
           
@@ -195,11 +197,12 @@ void querydb(String month, String year) {
             }
           }
           if(!tfound) {
-            currNodes.add(new Node(random(-800,800),db.getString("target"),1));
+            currNodes.add(new Node(random(-100,100),db.getString("target"),1,db.getInt("cluster")));
           }
         }
     findType(currNodes);   
     clusters.add(new Cluster(currNodes,links)); 
+    println(nclust);
 }
 
 
@@ -213,4 +216,15 @@ void findType(ArrayList<Node> nod) {
           n.group=db.getInt("type")+1;
         }
  }
+}
+
+void nextMonth() {
+ 
+ if(month<12) month++;
+ if (month==12) {
+     month=1;
+     if(year==2013) year=1992;
+     else year++;
+} 
+  
 }

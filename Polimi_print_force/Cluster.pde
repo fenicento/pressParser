@@ -33,9 +33,18 @@ class Cluster {
 
   Cluster(ArrayList<Node> n, ArrayList<String> ls) {
     
+    ArrayList<Vec2D> centers= new ArrayList<Vec2D>();
+    
+    for (int i = 0; i<nclust.keySet().size(); i++) {
+     
+     centers.add(new Vec2D(random(300,width-300),random(300,height-300))); 
+      
+    }
+    
     nodes=n;
     VerletParticle2D n1=null;
     VerletParticle2D n2=null;
+     int card=0;
     for(String c : ls) {
       
       String[] spc = c.split("-");
@@ -44,6 +53,7 @@ class Cluster {
         
         if(no.name.equalsIgnoreCase(spc[0])) {
          n1=(VerletParticle2D) no;
+         
         break; 
         }
         
@@ -51,14 +61,19 @@ class Cluster {
     
     for (Node no : nodes) {
         
+        no.x=centers.get(no.clust-1).x+random(-50,50);
+        no.y=centers.get(no.clust-1).y+random(-50,50);
+      
         if(no.name.equalsIgnoreCase(spc[1])) {
          n2=(VerletParticle2D) no;
+         
+         card=nclust.get(no.clust);
         break; 
         }
         
       }
-    
-      float near=500-float(spc[2])*40;
+     
+      float near=constrain(100+card*2-float(spc[2])*40,20,600);
       println("near: "+near);
       physics.addSpring(new VerletSpring2D(n1,n2,near,0.001));
       
@@ -100,8 +115,9 @@ class Cluster {
   void showConnections() {
     
     for(VerletSpring2D s : physics.springs) {
-      float val=(500-s.getRestLength())/40;
-      stroke(255,(10+val*10)*trasp);
+      //float val=(200-s.getRestLength())/40;
+      
+      stroke(100,100*trasp);
       line(s.a.x,s.a.y,s.b.x,s.b.y);
     
     }
