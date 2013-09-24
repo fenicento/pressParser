@@ -13,6 +13,7 @@ class Node extends VerletParticle2D {
   
   int group;
   float siz;
+  int vip=0;
   String name;
   int clust;
   
@@ -32,25 +33,41 @@ class Node extends VerletParticle2D {
 
   // All we're doing really is adding a display() function to a VerletParticle
   void display() {
-    fill(255,150);
-   
-    noStroke();
-//    if(group==1) drawTriangle(x,y,siz,#44ddff);
-//    else if(group==2) drawTriangle(x,y,siz,#ddff77);
-//     else if(group==3) drawTriangle(x,y,siz,#ff8888);
-     hint(DISABLE_DEPTH_TEST);
-     if(group==1) drawCircle(x,y,16,#44ddff);
-    else if(group==2) drawCircle(x,y,siz,#ddff77);
-     else if(group==3) drawCircle(x,y,siz,#ff8888);
-     hint(ENABLE_DEPTH_TEST); 
+     noStroke();
+    hint(DISABLE_DEPTH_TEST);
+    
+    if(vvip!=null) {
+     
+     if(this.vip>0) {
+      if(group==1) drawCircle(x,y,16,#44ddff,255);
+      else if(group==2) drawCircle(x,y,siz,#ddff77,255);
+      else if(group==3) drawCircle(x,y,siz,#ff8888,255);
+     }
+    
+    else {
+     if(group==1) drawCircle(x,y,16,#44ddff,40);
+     else if(group==2) drawCircle(x,y,siz,#ddff77,40);
+     else if(group==3) drawCircle(x,y,siz,#ff8888,40);
+    } 
+      
+    }
+    
+    else{
+     
+     if(group==1) drawCircle(x,y,16,#44ddff,255);
+     else if(group==2) drawCircle(x,y,siz,#ddff77,255);
+     else if(group==3) drawCircle(x,y,siz,#ff8888,255);
+     
+    }
+    hint(ENABLE_DEPTH_TEST); 
   }
   
-  void drawCircle(float x,float y, float m, color col) {
-    fill(col, 255*trasp);
+  void drawCircle(float x,float y, float m, color col, int alpha) {
+    fill(col, alpha*trasp);
     noStroke();
     float r=sqrt(m/PI)*9;
     ellipse(x,y,r,r);
-    fill(255,200*trasp);
+    fill(255,alpha*trasp);
    textSize(14);
    text(this.name, x+r, y+r*.5);
   }
