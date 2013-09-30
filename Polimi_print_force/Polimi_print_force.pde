@@ -29,7 +29,7 @@ HashMap<Integer, Integer> nclust = new HashMap<Integer, Integer>();
 boolean showPhysics = true;
 boolean showParticles = true;
 
-String relevant ="Lombardia";
+String relevant ="";
 VerletParticle2D vvip;
 Ani diameterAni;
 
@@ -38,8 +38,8 @@ PFont f;
 AttractionBehavior repulsion;
 int count=0;
 float trasp=1;
-int month=12;
-int year=1991;
+int month=2;
+int year=1992;
 
 
 /*************************************
