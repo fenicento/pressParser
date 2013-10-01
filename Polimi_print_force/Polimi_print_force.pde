@@ -29,7 +29,7 @@ HashMap<Integer, Integer> nclust = new HashMap<Integer, Integer>();
 boolean showPhysics = true;
 boolean showParticles = true;
 
-String relevant ="Lombardia";
+String relevant ="";
 VerletParticle2D vvip;
 Ani diameterAni;
 
@@ -39,7 +39,7 @@ AttractionBehavior repulsion;
 int count=0;
 float trasp=1;
 int month=12;
-int year=1991;
+int year=2007;
 
 
 /*************************************
@@ -75,7 +75,7 @@ void setup() {
   diameterAni = new Ani(this, 0.7, "trasp", 0f, Ani.SINE_IN, "onStart:itsStarted,onEnd:restoreTrasp");
   diameterAni.end();
 
-  querydb(String.valueOf(month), String.valueOf(year));
+  //querydb(String.valueOf(month), String.valueOf(year));
 
   println(links);
   textFont(f, 12);
@@ -365,7 +365,7 @@ void nextMonth() {
     fill(0);
     rect(-100, height-70, width+100,120);
     
-    textSize(10);
+    textSize(14);
     
     for(float i = 0; i<10; i++) {
        

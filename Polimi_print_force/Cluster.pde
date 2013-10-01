@@ -53,7 +53,7 @@ class Cluster {
       if(n1.vip==1) n2.vip=2;
       if(n2.vip==1) n1.vip=2;
 
-      float near=constrain(100+card*2-float(spc[2])*40, 10, 400);
+      float near=constrain(100+card*2-float(spc[2])*40, 200, 400);
       println("near: "+near);
       physics.addSpring(new VerletSpring2D((VerletParticle2D)n1, (VerletParticle2D)n2, near, 0.001));
     }
