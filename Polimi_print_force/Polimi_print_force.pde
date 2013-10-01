@@ -43,13 +43,10 @@ PFont fl;
 AttractionBehavior repulsion;
 int count=0;
 float trasp=1;
-<<<<<<< HEAD
-int month=12;
-int year=2007;
-=======
+
 int month=2;
 int year=1992;
->>>>>>> 797496123613c042949720cf95fd1e5af2557e87
+
 
 
 /*************************************
