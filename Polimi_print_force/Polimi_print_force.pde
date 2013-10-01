@@ -87,6 +87,7 @@ void setup() {
 
   println(links);
   textFont(fl, 12);
+  interval("2011", "2011");
 }
 
 
@@ -100,17 +101,16 @@ void setup() {
 void newGraph() {
   trasp=1;
 
-  
+
   // Clear physics
   physics.clear();
 
-  
+
   // Create new ArrayList (clears old one)
   clusters = new ArrayList();
   nclust = new HashMap<Integer, Integer>(); 
   nextMonth();
   querydb(String.valueOf(month), String.valueOf(year));
-  
 }
 
 
@@ -122,9 +122,9 @@ void newGraph() {
 
 void draw() {
   //println(trasp);
-  
+
   textAlign(LEFT);
-  if (count <= 300) 
+  if (count>0 && count<= 300) 
   {
     count++;
     //println("count: "+count);
@@ -145,13 +145,13 @@ void draw() {
   textFont(fl, 40);
   textAlign(RIGHT);
   monthString=new DateFormatSymbols(Locale.ENGLISH).getMonths()[month-1].toUpperCase();
-  text(monthString,200,75);
-  
+  text(monthString, 200, 75);
+
   textAlign(LEFT);
   textFont(fb, 40);
   float sl=monthString.length();
-  text(year,210,75);
-  
+  text(year, 210, 75);
+
 
   if (showPhysics) {
     for (int i = 0; i < clusters.size(); i++) {
@@ -168,9 +168,8 @@ void draw() {
       }
     }
   }
-textAlign(CENTER);
- drawSediments();
-  
+  textAlign(CENTER);
+  drawSediments();
 }
 
 
@@ -206,7 +205,7 @@ void keyPressed() {
 void restoreTrasp(Ani theAni) {
   count=0;
   Ani.to(this, 0.1, "trasp", 1f, Ani.SINE_IN);
-  newGraph();
+  //newGraph();
 }
 
 void itsStarted() {
@@ -235,9 +234,9 @@ void querydb(String month, String year) {
   {
 
     links.add(db.getString("source")+"#"+db.getString("target")+"#"+db.getString("value"));
-    
-   
-    
+
+
+
     int clu= db.getInt("cluster")+1;
     if (nclust.get(clu)!=null) nclust.put(clu, nclust.get(clu)+1);
     else nclust.put(clu, 1);
@@ -271,7 +270,6 @@ void querydb(String month, String year) {
   findType(currNodes);   
   clusters.add(new Cluster(currNodes, links)); 
   updateSediments(currNodes);
-  
 }
 
 
@@ -288,10 +286,10 @@ void findType(ArrayList<Node> nod) {
 
     while (db.next ())
     {
-      if(n.name.equalsIgnoreCase(relevant)) {
+      if (n.name.equalsIgnoreCase(relevant)) {
         n.vip=1;
-        vvip=(VerletParticle2D) n;  
-    }
+        vvip=(VerletParticle2D) n;
+      }
       n.group=db.getInt("type")+1;
     }
   }
@@ -311,61 +309,56 @@ void nextMonth() {
     month=1;
     if (year==2013) year=1992;
     else year++;
-  } 
-
+  }
 }
 
-  /*************************************
-   *
-   * UPDATE SEDIMENTS - update accumulation
-   * of entities
-   *
-   **************************************/
+/*************************************
+ *
+ * UPDATE SEDIMENTS - update accumulation
+ * of entities
+ *
+ **************************************/
 
-  void updateSediments(ArrayList<Node> currNodes) {
-    
-    println("updating sediments");
-    //remove past elements 
-    Iterator<Sediment> i = sediments.iterator();
-    while (i.hasNext ()) {
-      Sediment s = i.next(); 
-      s.update();
-      if (s.ct>=24) {
-        if(s.type==1) relCompany.sub(s.name,s.value);
-        else if(s.type==2) relPeople.sub(s.name,s.value);
-        else if(s.type==3) relPlaces.sub(s.name,s.value);
-        i.remove();
-      }
+void updateSediments(ArrayList<Node> currNodes) {
+
+  println("updating sediments");
+  //remove past elements 
+  Iterator<Sediment> i = sediments.iterator();
+  while (i.hasNext ()) {
+    Sediment s = i.next(); 
+    s.update();
+    if (s.ct>=24) {
+      if (s.type==1) relCompany.sub(s.name, s.value);
+      else if (s.type==2) relPeople.sub(s.name, s.value);
+      else if (s.type==3) relPlaces.sub(s.name, s.value);
+      i.remove();
+    }
+  }
+
+  //add new elements
+  for (Node n : currNodes) {
+    Sediment s = new Sediment(n.name, int(n.siz), n.group);
+    sediments.add(s);
+
+    if (s.type==1) {
+      if (relCompany.hasKey(s.name)) relCompany.add(s.name, s.value);
+      else relCompany.set(s.name, s.value);
     }
 
-    //add new elements
-    for (Node n : currNodes) {
-      Sediment s = new Sediment(n.name, int(n.siz), n.group);
-      sediments.add(s);
-      
-      if(s.type==1) {
-       if(relCompany.hasKey(s.name)) relCompany.add(s.name,s.value);
-        else relCompany.set(s.name,s.value);
-        
-      }
-      
-      else if(s.type==2) {
-       if(relPeople.hasKey(s.name)) relPeople.add(s.name,s.value);
-        else relPeople.set(s.name,s.value);
-        
-      }
-      
-      else if(s.type==3) {
-       if(relPlaces.hasKey(s.name)) relPlaces.add(s.name,s.value);
-        else relPlaces.set(s.name,s.value);
-       
-      }
+    else if (s.type==2) {
+      if (relPeople.hasKey(s.name)) relPeople.add(s.name, s.value);
+      else relPeople.set(s.name, s.value);
     }
+
+    else if (s.type==3) {
+      if (relPlaces.hasKey(s.name)) relPlaces.add(s.name, s.value);
+      else relPlaces.set(s.name, s.value);
+    }
+  }
 
   relCompany.sortValuesReverse();
   relPeople.sortValuesReverse();
   relPlaces.sortValuesReverse();
-
 }
 
 
@@ -376,47 +369,113 @@ void nextMonth() {
  *
  **************************************/
 
-  void drawSediments() {
-   hint(DISABLE_DEPTH_TEST);
-   
-    fill(0);
-    rect(-100, height-70, width+100,120);
-    
-    textSize(14);
-    
-    for(float i = 0; i<10; i++) {
-       
-      if(relCompany.size()>i+1) {
-       
-       String kc=relCompany.keyArray()[int(i)];
-       Integer vc = relCompany.get(kc);
-       fill(#F73A10);
-       ellipse(sedSiz*i+sedSiz, height-50, sqrt(float(vc)/PI)*10,sqrt(float(vc)/PI)*10);
-       fill(255);
-       text(kc,sedSiz*i+sedSiz/2, height-20,sedSiz, 20);
-       
-       
-      }
-      if(relPeople.size()>i+1) {
-      
-       String kp=relPeople.keyArray()[int(i)];
-       Integer vp = relPeople.get(kp);
-       fill(#66BAA6);
-       ellipse(width/3+sedSiz*i+sedSiz, height-50, sqrt(float(vp)/PI)*10,sqrt(float(vp)/PI)*10);
-       fill(255);
-        text(kp,width/3+sedSiz*i+sedSiz/2, height-20,sedSiz, 40);
-       
-      }
-      if(relPlaces.size()>i+1) { 
-  
-       String kpl=relPlaces.keyArray()[int(i)];
-       Integer vpl = relPlaces.get(kpl);
-       fill(#0D5C19);
-       ellipse(2*width/3+sedSiz*i+sedSiz, height-50, sqrt(float(vpl)/PI)*10,sqrt(float(vpl)/PI)*10);
-       fill(255);
-       text(kpl,2*width/3+sedSiz*i+sedSiz/2, height-20, sedSiz, 40);
-      }
-      
+void drawSediments() {
+  hint(DISABLE_DEPTH_TEST);
+
+  fill(0);
+  rect(-100, height-70, width+100, 120);
+
+  textSize(14);
+
+  for (float i = 0; i<10; i++) {
+
+    if (relCompany.size()>i+1) {
+
+      String kc=relCompany.keyArray()[int(i)];
+      Integer vc = relCompany.get(kc);
+      fill(#F73A10);
+      ellipse(sedSiz*i+sedSiz, height-50, sqrt(float(vc)/PI)*10, sqrt(float(vc)/PI)*10);
+      fill(255);
+      text(kc, sedSiz*i+sedSiz/2, height-20, sedSiz, 20);
     }
-    hint(ENABLE_DEPTH_TEST);
+    if (relPeople.size()>i+1) {
+
+      String kp=relPeople.keyArray()[int(i)];
+      Integer vp = relPeople.get(kp);
+      fill(#66BAA6);
+      ellipse(width/3+sedSiz*i+sedSiz, height-50, sqrt(float(vp)/PI)*10, sqrt(float(vp)/PI)*10);
+      fill(255);
+      text(kp, width/3+sedSiz*i+sedSiz/2, height-20, sedSiz, 40);
+    }
+    if (relPlaces.size()>i+1) { 
+
+      String kpl=relPlaces.keyArray()[int(i)];
+      Integer vpl = relPlaces.get(kpl);
+      fill(#0D5C19);
+      ellipse(2*width/3+sedSiz*i+sedSiz, height-50, sqrt(float(vpl)/PI)*10, sqrt(float(vpl)/PI)*10);
+      fill(255);
+      text(kpl, 2*width/3+sedSiz*i+sedSiz/2, height-20, sedSiz, 40);
+    }
   }
+  hint(ENABLE_DEPTH_TEST);
+}
+
+/*************************************
+ *
+ * INTERVAL - select a time interval
+ * in years
+ *
+ **************************************/
+
+
+void interval(String y1, String y2) {
+  
+  int diff=int(y2)-int(y1);
+
+  db.connect(); 
+  db.query( "SELECT x.f1 FROM (SELECT source As F1 FROM links WHERE year BETWEEN \""+y1+"\" AND \""+y2+"\"  UNION ALL SELECT target As F1 FROM links WHERE year BETWEEN \""+y1+"\" AND \""+y2+"\") x GROUP BY x.f1 ORDER BY Count(x.f1) DESC LIMIT 60");
+  ArrayList <String> selection = new ArrayList<String>();
+  while (db.next ())
+  {
+    selection.add(db.getString("F1"));
+  }
+
+  ArrayList<Node> currNodes = new ArrayList<Node>();
+  links = new ArrayList<String>();
+  nclust.put(1, 0);
+
+  db.query( "SELECT * FROM links where year BETWEEN \""+y1+"\" AND \""+y2+"\"");
+
+  while (db.next ()) {
+    if (selection.contains(db.getString("source")) && selection.contains(db.getString("target")) ) {
+      links.add(db.getString("source")+"#"+db.getString("target")+"#"+db.getString("value"));
+
+
+
+      int clu= db.getInt("cluster")+1;
+      if (nclust.get(clu)!=null) nclust.put(clu, nclust.get(clu)+1);
+      else nclust.put(clu, 1);
+      //find sources
+      boolean sfound=false;
+      for (Node n : currNodes) {
+        if (db.getString("source").equalsIgnoreCase(n.name)) {
+          sfound=true;
+          n.siz+=1f/float(f);
+          break;
+        }
+      }
+      if (!sfound) {
+        currNodes.add(new Node(random(-80, 80), db.getString("source"), 1f/float(f), db.getInt("cluster")));
+      }
+
+
+      //find targets
+      boolean tfound=false;
+      for (Node n : currNodes) {
+        if (db.getString("target").equalsIgnoreCase(n.name)) {
+          tfound=true;
+          n.siz+=1f/float(f);
+          break;
+        }
+      }
+      if (!tfound) {
+        currNodes.add(new Node(random(-100, 100), db.getString("target"), 1f/float(f), db.getInt("cluster")));
+      }
+    }
+  }
+  findType(currNodes);   
+  clusters.add(new Cluster(currNodes, links)); 
+  updateSediments(currNodes);
+  count=0;
+}
+

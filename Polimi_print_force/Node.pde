@@ -39,9 +39,9 @@ class Node extends VerletParticle2D {
     if(vvip!=null) {
      
      if(this.vip>0) {
-      if(group==1) drawCircle(x,y,16,#F73A10,255);
-      else if(group==2) drawCircle(x,y,siz,#66BAA6,255);
-      else if(group==3) drawCircle(x,y,siz,#0D5C19,255);
+      if(group==1) drawCircle(x,y,16,#F73A10,200);
+      else if(group==2) drawCircle(x,y,siz,#66BAA6,220);
+      else if(group==3) drawCircle(x,y,siz,#0D5C19,220);
      }
     
     else {
@@ -54,9 +54,9 @@ class Node extends VerletParticle2D {
     
     else{
      
-     if(group==1) drawCircle(x,y,16,#F73A10,255);
-     else if(group==2) drawCircle(x,y,siz,#66BAA6,255);
-     else if(group==3) drawCircle(x,y,siz,#0D5C19,255);
+     if(group==1) drawCircle(x,y,16,#F73A10,200);
+     else if(group==2) drawCircle(x,y,siz,#66BAA6,220);
+     else if(group==3) drawCircle(x,y,siz,#0D5C19,220);
      
     }
     hint(ENABLE_DEPTH_TEST); 
