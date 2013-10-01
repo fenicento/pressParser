@@ -8,6 +8,9 @@ import peasy.*;
 import de.looksgood.ani.*;
 import java.util.Iterator;
 import java.util.Map;
+import java.util.Locale;
+import java.text.DateFormatSymbols;
+String monthString;
 
 
 VerletPhysics2D physics;
@@ -17,6 +20,7 @@ float sedSiz;
 // A list of cluster objects
 ArrayList clusters;
 ArrayList<String> links;
+
 
 IntDict relPlaces = new IntDict();
 IntDict relPeople = new IntDict();
@@ -34,7 +38,8 @@ VerletParticle2D vvip;
 Ani diameterAni;
 
 // Font
-PFont f;
+PFont fb;
+PFont fl;
 AttractionBehavior repulsion;
 int count=0;
 float trasp=1;
@@ -57,7 +62,8 @@ void setup() {
   cam.setMinimumDistance(300);
   cam.setMaximumDistance(1300);
   cam.lookAt(width/2, height/2+50, 0);
-  f = loadFont("lato.vlw");
+  fl = loadFont("DIN-l40.vlw");
+  fb = loadFont("DIN-b40.vlw");
   db = new SQLite( this, "press.sqlite" );  // open database file
   sedSiz=width/32f;
   smooth(8);
@@ -78,7 +84,7 @@ void setup() {
   querydb(String.valueOf(month), String.valueOf(year));
 
   println(links);
-  textFont(f, 12);
+  textFont(fl, 12);
 }
 
 
@@ -134,7 +140,16 @@ void draw() {
 
   fill(255);
   textSize(40);
-  text(month+"  "+year, 10, 60);
+  textFont(fl, 40);
+  textAlign(RIGHT);
+  monthString=new DateFormatSymbols(Locale.ENGLISH).getMonths()[month-1].toUpperCase();
+  text(monthString,200,75);
+  
+  textAlign(LEFT);
+  textFont(fb, 40);
+  float sl=monthString.length();
+  text(year,210,75);
+  
 
   if (showPhysics) {
     for (int i = 0; i < clusters.size(); i++) {
@@ -373,7 +388,7 @@ void nextMonth() {
        
        String kc=relCompany.keyArray()[int(i)];
        Integer vc = relCompany.get(kc);
-       fill(#44ddff);
+       fill(#F73A10);
        ellipse(sedSiz*i+sedSiz, height-50, sqrt(float(vc)/PI)*10,sqrt(float(vc)/PI)*10);
        fill(255);
        text(kc,sedSiz*i+sedSiz/2, height-20,sedSiz, 20);
@@ -384,7 +399,7 @@ void nextMonth() {
       
        String kp=relPeople.keyArray()[int(i)];
        Integer vp = relPeople.get(kp);
-       fill(#ddff77);
+       fill(#66BAA6);
        ellipse(width/3+sedSiz*i+sedSiz, height-50, sqrt(float(vp)/PI)*10,sqrt(float(vp)/PI)*10);
        fill(255);
         text(kp,width/3+sedSiz*i+sedSiz/2, height-20,sedSiz, 40);
@@ -394,7 +409,7 @@ void nextMonth() {
   
        String kpl=relPlaces.keyArray()[int(i)];
        Integer vpl = relPlaces.get(kpl);
-       fill(#ff8888);
+       fill(#0D5C19);
        ellipse(2*width/3+sedSiz*i+sedSiz, height-50, sqrt(float(vpl)/PI)*10,sqrt(float(vpl)/PI)*10);
        fill(255);
        text(kpl,2*width/3+sedSiz*i+sedSiz/2, height-20, sedSiz, 40);
