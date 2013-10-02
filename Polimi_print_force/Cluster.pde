@@ -53,7 +53,7 @@ class Cluster {
       if(n1.vip==1) n2.vip=2;
       if(n2.vip==1) n1.vip=2;
 
-      float near=constrain(100+card*2-float(spc[2])*40, 200, 400);
+      float near=constrain(100+card*2-float(spc[2])*40, 200, 500)+random(-20,20);
       println("near: "+near);
       physics.addSpring(new VerletSpring2D((VerletParticle2D)n1, (VerletParticle2D)n2, near, 0.001));
     }
@@ -76,7 +76,7 @@ class Cluster {
     for (VerletSpring2D s : physics.springs) {
       //float val=(200-s.getRestLength())/40;
       if(vvip!=null && (s.a.equals(vvip) || s.b.equals(vvip))) stroke(255,200*trasp);
-      else stroke(100, 100*trasp);
+      else stroke(100, 50*trasp);
       
       line(s.a.x, s.a.y, s.b.x, s.b.y);
     }
