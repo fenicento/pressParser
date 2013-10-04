@@ -87,7 +87,11 @@ void setup() {
 
   println(links);
   textFont(fl, 12);
+<<<<<<< HEAD
   interval("2001", "2013");
+=======
+  interval("1992", "2003");
+>>>>>>> 9be0fa364d70c6c6cb6c850b5eb87d073ef4962e
 }
 
 
@@ -327,7 +331,7 @@ void updateSediments(ArrayList<Node> currNodes) {
   while (i.hasNext ()) {
     Sediment s = i.next(); 
     s.update();
-    if (s.ct>=24) {
+    if (s.ct>=1000) {
       if (s.type==1) relCompany.sub(s.name, s.value);
       else if (s.type==2) relPeople.sub(s.name, s.value);
       else if (s.type==3) relPlaces.sub(s.name, s.value);
@@ -450,12 +454,16 @@ void interval(String y1, String y2) {
       for (Node n : currNodes) {
         if (db.getString("source").equalsIgnoreCase(n.name)) {
           sfound=true;
-          n.siz+=1f/float(diff);
+
+          n.siz+=1/float(10+diff);
+
           break;
         }
       }
       if (!sfound) {
-        currNodes.add(new Node(random(-80, 80), db.getString("source"), 1f/float(diff), db.getInt("cluster")));
+
+        currNodes.add(new Node(random(-80, 80), db.getString("source"), 1, db.getInt("cluster")));
+
       }
 
 
@@ -464,12 +472,16 @@ void interval(String y1, String y2) {
       for (Node n : currNodes) {
         if (db.getString("target").equalsIgnoreCase(n.name)) {
           tfound=true;
-          n.siz+=1f/float(diff);
+
+          n.siz+=1/float(10+diff);
+
           break;
         }
       }
       if (!tfound) {
-        currNodes.add(new Node(random(-100, 100), db.getString("target"), 1f/float(diff), db.getInt("cluster")));
+
+        currNodes.add(new Node(random(-100, 100), db.getString("target"), 1, db.getInt("cluster")));
+
       }
     }
   }
