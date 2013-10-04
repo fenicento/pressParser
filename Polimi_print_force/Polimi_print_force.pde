@@ -11,6 +11,9 @@ import java.util.Map;
 import java.util.Locale;
 import java.text.DateFormatSymbols;
 String monthString;
+boolean people=true;
+boolean orgs=true;
+boolean places=true;
 
 
 VerletPhysics2D physics;
@@ -46,6 +49,8 @@ float trasp=1;
 
 int month=2;
 int year=1992;
+int yr1=0;
+int yr2=0;
 
 
 
@@ -67,7 +72,7 @@ void setup() {
   fl = loadFont("DIN-l40.vlw");
   fb = loadFont("DIN-b40.vlw");
   db = new SQLite( this, "press.sqlite" );  // open database file
-  sedSiz=width/32f;
+  sedSiz=width/27f;
   smooth(8);
   // Initialize the physics
 
@@ -87,11 +92,7 @@ void setup() {
 
   println(links);
   textFont(fl, 12);
-<<<<<<< HEAD
-  interval("2001", "2013");
-=======
   interval("1992", "2003");
->>>>>>> 9be0fa364d70c6c6cb6c850b5eb87d073ef4962e
 }
 
 
@@ -148,14 +149,24 @@ void draw() {
   textSize(40);
   textFont(fl, 40);
   textAlign(RIGHT);
+  
+  if(yr1 ==0 && yr2==0) {
   monthString=new DateFormatSymbols(Locale.ENGLISH).getMonths()[month-1].toUpperCase();
   text(monthString, 200, 75);
 
   textAlign(LEFT);
   textFont(fb, 40);
+  
   float sl=monthString.length();
   text(year, 210, 75);
-
+  }
+  
+  else {
+    textAlign(LEFT);
+    textFont(fb, 40);
+    text(yr1+" / "+yr2, 35, 75);
+    
+  }
 
   if (showPhysics) {
     for (int i = 0; i < clusters.size(); i++) {
@@ -228,6 +239,8 @@ void itsStarted() {
 
 void querydb(String month, String year) {
 
+  yr1=0;
+  yr2=0;
   db.connect(); 
   db.query( "SELECT * FROM links where year=\""+year+"\" AND month=\""+month+"\""); 
 
@@ -294,7 +307,11 @@ void findType(ArrayList<Node> nod) {
         n.vip=1;
         vvip=(VerletParticle2D) n;
       }
+      
       n.group=db.getInt("type")+1;
+      if(n.group==1 && !orgs) n.disp=false;
+      else if(n.group==2 && !people) n.disp=false;
+      else if(n.group==3 && !places) n.disp=false;
     }
   }
 }
@@ -313,6 +330,13 @@ void nextMonth() {
     month=1;
     if (year==2013) year=1992;
     else year++;
+  }
+  if(month==9 && year==2013) {
+  month=1;
+  year=1992;
+  relCompany.clear();
+  relPlaces.clear();
+  relPeople.clear();
   }
 }
 
@@ -381,34 +405,41 @@ void drawSediments() {
 
   textSize(14);
 
-  for (float i = 0; i<10; i++) {
+  for (float i = 0; i<8; i++) {
 
     if (relCompany.size()>i+1) {
 
       String kc=relCompany.keyArray()[int(i)];
       Integer vc = relCompany.get(kc);
       fill(#F73A10);
-      ellipse(sedSiz*i+sedSiz, height-50, sqrt(float(vc)/PI)*10, sqrt(float(vc)/PI)*10);
+      ellipse(sedSiz*i+sedSiz, height-50, sqrt(float(vc)/PI)*6, sqrt(float(vc)/PI)*6);
       fill(255);
-      text(kc, sedSiz*i+sedSiz/2, height-20, sedSiz, 20);
+     
+      
+      text(kc, sedSiz*i+sedSiz/2, height-20,sedSiz, 20);
+     
     }
     if (relPeople.size()>i+1) {
 
       String kp=relPeople.keyArray()[int(i)];
       Integer vp = relPeople.get(kp);
       fill(#66BAA6);
-      ellipse(width/3+sedSiz*i+sedSiz, height-50, sqrt(float(vp)/PI)*10, sqrt(float(vp)/PI)*10);
+      ellipse(width/3+sedSiz*i+sedSiz, height-50, sqrt(float(vp)/PI)*6, sqrt(float(vp)/PI)*6);
       fill(255);
+      pushMatrix();
       text(kp, width/3+sedSiz*i+sedSiz/2, height-20, sedSiz, 40);
+      popMatrix();
     }
     if (relPlaces.size()>i+1) { 
 
       String kpl=relPlaces.keyArray()[int(i)];
       Integer vpl = relPlaces.get(kpl);
       fill(#0D5C19);
-      ellipse(2*width/3+sedSiz*i+sedSiz, height-50, sqrt(float(vpl)/PI)*10, sqrt(float(vpl)/PI)*10);
+      ellipse(2*width/3+sedSiz*i+sedSiz, height-50, sqrt(float(vpl)/PI)*6, sqrt(float(vpl)/PI)*6);
       fill(255);
+      pushMatrix();
       text(kpl, 2*width/3+sedSiz*i+sedSiz/2, height-20, sedSiz, 40);
+      popMatrix();
     }
   }
   hint(ENABLE_DEPTH_TEST);
@@ -423,6 +454,9 @@ void drawSediments() {
 
 
 void interval(String y1, String y2) {
+  
+  yr1=int(y1);
+  yr2=int(y2);
   
   int diff=int(y2)-int(y1)+1;
 
@@ -454,34 +488,25 @@ void interval(String y1, String y2) {
       for (Node n : currNodes) {
         if (db.getString("source").equalsIgnoreCase(n.name)) {
           sfound=true;
-
           n.siz+=1/float(10+diff);
-
           break;
         }
       }
       if (!sfound) {
-
         currNodes.add(new Node(random(-80, 80), db.getString("source"), 1, db.getInt("cluster")));
-
       }
-
 
       //find targets
       boolean tfound=false;
       for (Node n : currNodes) {
         if (db.getString("target").equalsIgnoreCase(n.name)) {
           tfound=true;
-
           n.siz+=1/float(10+diff);
-
           break;
         }
       }
       if (!tfound) {
-
         currNodes.add(new Node(random(-100, 100), db.getString("target"), 1, db.getInt("cluster")));
-
       }
     }
   }
@@ -489,5 +514,19 @@ void interval(String y1, String y2) {
   clusters.add(new Cluster(currNodes, links)); 
   updateSediments(currNodes);
   count=0;
+}
+
+
+void checkFilters() {
+  
+//  for (Node k : currNodes) {
+//   
+//   if(k.group==1 && !orgs) k.disp=false;
+//   else if(k.group==2 && !people) k.disp=false;
+//   else if(k.group==3 && !places) k.disp=false;
+//    
+//  }
+  
+  
 }
 

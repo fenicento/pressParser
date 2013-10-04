@@ -12,12 +12,27 @@ print lst
 
 res=list() 
 
+
 for i in lst:
 	
-	cur.execute('SELECT DISTINCT year,month from links where source=\''+i+'\' OR target=\''+i+'\'')
+	n="";
+	cur.execute("SELECT DISTINCT year,month from links where source=\""+i+"\" OR target=\""+i+"\"")
 	rows=cur.fetchall()
+	
+	obj=dict()
+	obj['n']=i
+	obj['p']=list()
 	for r in rows:
-		print(i,r)
+		obj['p'].append(r[0]+"#"+r[1])
+	
+	res.append(obj)
+	print obj	
+	
+
+
+			
+with open("ent.json","w") as outfile:
+	json.dump(res,outfile)
 	
 
 
